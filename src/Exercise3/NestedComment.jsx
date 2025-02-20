@@ -13,3 +13,16 @@ Render the comments and their nested replies recursively (use one of the Array m
 Style the component using an external CSS file to visually differentiate between comment levels.
 */
 
+import { Fragment } from "react";
+
+export default function NestedComment(props){
+    const {author, content, replies} = props;
+   
+    return(
+        <Fragment>
+        <h1>{author}</h1>
+        <h2>{content}</h2>
+        <p>{replies}</p>
+        </Fragment>
+    );
+}
