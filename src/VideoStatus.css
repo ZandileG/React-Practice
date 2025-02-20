@@ -1,0 +1,9 @@
+.statusTrue{
+    color: green;
+    font-size: 40px;
+}
+
+.statusFalse{
+    color: crimson;
+    font-size: 40px;
+}
