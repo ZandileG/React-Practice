@@ -1,9 +1,14 @@
-function YouTubeVideo(){
+import { Fragment } from "react";
+
+function YouTubeVideo(props){
+    const { image, title, channel, views } = props;
     return (
-    <div>
-    <h2>Video Name</h2>
-    <img src="" alt=""/>
-    </div>
+    <Fragment>
+    <img src={image} alt="Thumbnail"/>
+    <h2>{title}</h2>
+    <h4>{channel}</h4>
+    <p>{views}</p>
+    </Fragment>
     );
 }
 

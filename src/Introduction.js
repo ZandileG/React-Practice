@@ -70,7 +70,7 @@ const products = [
 ];
 
 export default function ShoppingList(){
-const listItems = products.map(product =>
+const listItems = products.map(function product (){
     <li 
         key = {product.id}
         style = {{
@@ -78,7 +78,7 @@ const listItems = products.map(product =>
             color: product.isFruit ? "magenta" : "darkgreen"
         }}>
         {product.title}
-    </li>
+    </li>}
 );
 
 return(

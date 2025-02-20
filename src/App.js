@@ -1,12 +1,11 @@
-import logo from "./logo.svg";
 import "./App.css";
-import YouTubeVideo from "./YouTubeVideo";
+import YouTubeVideoList from "./YouTubeVideoList";
 
 function App() {
   return (
     <div className="App">
-      <h1>Hello World!</h1>
-      <YouTubeVideo />
+      <h1>YouTube</h1>
+      <YouTubeVideoList />
     </div>
   );
 }
