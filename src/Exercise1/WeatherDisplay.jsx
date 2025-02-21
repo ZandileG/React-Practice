@@ -12,19 +12,36 @@ Style the component using inline styles or CSS-in-JS for dynamic styling based o
 
 import { Fragment } from "react";
 
-export default function WeatherDisplay(props){
-    const {temperature, condition, isDay} = props;
+export default function WeatherDisplay(){
     const weather = {
-        temperature: 25,
-        condition: "Sunny",
-        isDay: true,
+        temperature: 25  +"ºC",
+        condition: "Snowy",
+        isDay: false,
+    };
+
+    const weatherMessage = function (){
+        if (weather.condition === "Sunny"){
+            return weather.isDay ? "It's a sunny day!" 
+                         : "The night sky is clear.";
+        } else if(weather.condition === "Cloudy"){
+            return weather.isDay ? "It's a cloudy day."
+                         : "It's a cloudy night."
+        } else if (weather.condition === "Rainy"){
+            return weather.isDay ? "It's a rainy day."
+                         : "It's a rainy night."
+        } else if (weather.condition === "Snowy"){
+            return weather.isDay ? "It's a snowy day."
+                         : "It's a snowy night."
+        } else{
+            return "The weather is unusual.";
+        }
     };
 
     return(
         <Fragment>
-        <h1>{weather.temperature + "°C"}</h1>
-        <h2>{weather.condition}</h2>
-        <p>{weather.isDay}</p>
+        <h1>Weather Display</h1>
+        <h2>{weather.temperature}</h2>
+        <h3 style = {{color: weather.isDay ? "orange" : "blue"}}>{weatherMessage()}</h3>
         </Fragment>
     );
 }

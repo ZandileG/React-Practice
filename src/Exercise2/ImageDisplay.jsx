@@ -10,13 +10,25 @@ Hint: JavaScript has many built-in methods for events, including one for errors.
 */
 
 import { Fragment } from "react";
+import "./ImageDisplay.css"
 
-export default function ImageDisplay(props){
-    const {imageUrl, altText} = props;
+export default function ImageDisplay(){
+
+    const content = {
+        imageUrl: "https://picsum.photos/200/300",
+        altText: "The image was not able to load."
+    }
+
+   /* function imageError(){
+
+    }*/
 
     return(
         <Fragment>
-        <img src = {imageUrl} alt = {altText} />
+        <h1>Image Display</h1>
+        <img src = {content.imageUrl} alt="Random Landscape" onerror="imageError()" />
+        <p className="altText">{content.altText}</p>
         </Fragment>
     );
+
 }
