@@ -1,0 +1,25 @@
+/*Solutions*/
+.comment{
+    border: 1px solid #ddd; 
+    padding: 10px; 
+    margin: 10px 0; 
+    border-radius: 5px; 
+    background-color: #f9f9f9; 
+}
+
+.comment-author{
+    font-weight: bold; 
+    color: #333; 
+    margin-bottom: 5px; 
+}
+
+.comment-content{
+    margin-bottom: 5px;
+}
+
+.comment-replies{
+  margin-left: 20px; 
+  border-left: 2px solid #ddd; 
+  padding-left: 10px; 
+
+}
