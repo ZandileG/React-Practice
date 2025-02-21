@@ -19,16 +19,16 @@ export default function ImageDisplay(){
         altText: "The image was not able to load."
     }
 
-   /* function imageError(){
-
-    }*/
+   function imageError(e){
+        e.target.classList.add("hidden");
+        e.target.nextSibling.classList.remove("hidden"); 
+    }
 
     return(
         <Fragment>
         <h1>Image Display</h1>
-        <img src = {content.imageUrl} alt="Random Landscape" onerror="imageError()" />
-        <p className="altText">{content.altText}</p>
+        <img src = {content.imageUrl} alt={content.altText} onError={imageError} />
+        <p className="error-text hidden">{content.altText}</p>
         </Fragment>
     );
-
 }

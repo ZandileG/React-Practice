@@ -20,8 +20,9 @@ export default function NestedComment(props){
    
     return(
         <Fragment>
-        <h1>{author}</h1>
-        <h2>{content}</h2>
+        <h1>Nested Comment</h1>
+        <h2>{author}</h2>
+        <p>{content}</p>
         <p>{replies}</p>
         </Fragment>
     );
