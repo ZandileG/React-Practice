@@ -20,7 +20,6 @@ import "./NestedComment.css";
 export default function NestedComment({comment}){   
     return(
         <div className="comment">
-        <h1>Nested Comment</h1>
         <p className="comment-author">{comment.author}</p>
         <p className="comment-content">{comment.content}</p>
         {comment.replies && comment.replies.length > 0 &&(

@@ -7,20 +7,20 @@ import NestedComment from "./Exercise3/NestedComment";
 export default function App() {
 
   const commentsData ={
-    author: "",
+    author: "Author 1",
+    content: "Comment",
+    replies: [
+    {
+    author: "Author 2",
     content: "",
     replies: [
     {
-    author: "",
-    content: "",
+    author: "Author 3",
+    content: "Comment",
     replies: [
     {
-    author: "",
-    content: "",
-    replies: [
-    {
-    author: "",
-    content: "",
+    author: "Author 4",
+    content: "Comment",
     replies: [],
   },
 ],
@@ -28,8 +28,8 @@ export default function App() {
 ],
   },
   {
-    author: "",
-    content: "",
+    author: "Author 5",
+    content: "Comment",
     replies: [],
   },
 ],
@@ -37,6 +37,7 @@ export default function App() {
 
   return (
     <div className="App">
+      <h1>Nested Comment</h1>
       <NestedComment comment={commentsData}/>
     </div>
   );
