@@ -1,4 +1,5 @@
 /*Exercise 1: Weather Display Component with Conditional Rendering
+
 Create a WeatherDisplay component that accepts props for temperature, 
 condition (sunny, cloudy, rainy, etc.), and a boolean for whether it is day or night. 
 The component should conditionally render messages based on the weather condition and time of day.

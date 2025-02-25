@@ -153,3 +153,5 @@ function MyButton({ count, onClick }){
         </button>
     );
 }
+
+/*{()=> setCount(count - 1)} */

@@ -1,9 +1,5 @@
 import "./App.css";
 import React from "react";
-/*import WeatherDisplay from "./Exercise1/WeatherDisplay";*/
-/*import ImageDisplay from "./Exercise2/ImageDisplay";*/
-/*import NestedComment from "./Exercise3/NestedComment";*/
-import YouTubeVideo from "./YouTube/YouTubeVideoList";
 
 export default function App() {
 
@@ -38,7 +34,7 @@ export default function App() {
 
   return (
     <div className="App">
-     <YouTubeVideo />
+
     </div>
   );
 }
