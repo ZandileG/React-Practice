@@ -2,17 +2,18 @@ import "./App.css";
 import React from "react";
 /*import WeatherDisplay from "./Exercise1/WeatherDisplay";*/
 /*import ImageDisplay from "./Exercise2/ImageDisplay";*/
-import NestedComment from "./Exercise3/NestedComment";
+/*import NestedComment from "./Exercise3/NestedComment";*/
+import YouTubeVideo from "./YouTube/YouTubeVideoList";
 
 export default function App() {
 
-  const commentsData ={
+ /* const commentsData ={
     author: "Author 1",
     content: "Comment",
     replies: [
     {
     author: "Author 2",
-    content: "",
+    content: "Comment",
     replies: [
     {
     author: "Author 3",
@@ -33,12 +34,14 @@ export default function App() {
     replies: [],
   },
 ],
-  };
+  };*/
 
   return (
     <div className="App">
-      <h1>Nested Comment</h1>
-      <NestedComment comment={commentsData}/>
+     <YouTubeVideo />
     </div>
   );
 }
+
+/* <h1>Nested Comment</h1>
+      <NestedComment comment={commentsData}/>*/

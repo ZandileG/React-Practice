@@ -1,7 +1,6 @@
 import { Fragment } from "react";
 
-function YouTubeVideo(props){
-    const { image, title, channel, views } = props;
+function YouTubeVideo({ image, title, channel, views }){
     return (
     <Fragment>
     <img src={image} alt="Thumbnail"/>
