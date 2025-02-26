@@ -17,11 +17,18 @@ export default function NameList(){
         { name: "Diana", id: 4 },
     ];
 
+    const names = ["Alice", "Bob", "Charlie", "Diana"];
+
     const listItems = people.map(person =>
         <li key = {person.id}>{person.name}</li>
 ); 
 
     return(
         <ul>{listItems}</ul>
+
+        /*<div>
+        {names.map((name, index) =>(
+            <li key={index}>{name}</li>))}
+        </div> */
     );
 }
