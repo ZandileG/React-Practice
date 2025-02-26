@@ -7,3 +7,9 @@ When the user types in the input field, update the state to reflect the current 
 When the form is submitted, display an alert with the entered value, and clear the input field.
 Use useState to manage the input value.
 */
+
+import React from "react";
+
+export default function SimpleForm(){
+
+}

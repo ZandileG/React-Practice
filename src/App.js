@@ -1,43 +1,17 @@
 import "./App.css";
 import React from "react";
+//import NameList from "./Practice/Week 3/NameList";
+import NameList from "./Practice/Week 3/SimpleForm";
+//import NameList from "./Practice/Week 3/TaskList";
 
-export default function App() {
-
- /* const commentsData ={
-    author: "Author 1",
-    content: "Comment",
-    replies: [
-    {
-    author: "Author 2",
-    content: "Comment",
-    replies: [
-    {
-    author: "Author 3",
-    content: "Comment",
-    replies: [
-    {
-    author: "Author 4",
-    content: "Comment",
-    replies: [],
-  },
-],
-  },
-],
-  },
-  {
-    author: "Author 5",
-    content: "Comment",
-    replies: [],
-  },
-],
-  };*/
+export default function App(){
 
   return (
     <div className="App">
-
+      <SimpleForm />
     </div>
   );
 }
 
-/* <h1>Nested Comment</h1>
-      <NestedComment comment={commentsData}/>*/
+//<NameList />
+//<TaskList />

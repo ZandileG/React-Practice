@@ -63,14 +63,14 @@ Without else
     } </div>*/
 
 //Rendering lists
-const products = [
-    { title: "Cabbage", isFruit: false, id: 1 },
-    { title: "Garlic", isFruit: false, id: 2 },
-    { title: "Apple", isFruit: true, id: 3 },
-];
-
 export default function ShoppingList(){
-const listItems = products.map(function product (){
+    const products = [
+        { title: "Cabbage", isFruit: false, id: 1 },
+        { title: "Garlic", isFruit: false, id: 2 },
+        { title: "Apple", isFruit: true, id: 3 },
+    ];
+    
+const listItems = products.map(product =>
     <li 
         key = {product.id}
         style = {{
@@ -78,7 +78,7 @@ const listItems = products.map(function product (){
             color: product.isFruit ? "magenta" : "darkgreen"
         }}>
         {product.title}
-    </li>}
+    </li>
 );
 
 return(
