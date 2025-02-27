@@ -5,10 +5,10 @@ condition (sunny, cloudy, rainy, etc.), and a boolean for whether it is day or n
 The component should conditionally render messages based on the weather condition and time of day.
 
 Task:
-Create a new React component named WeatherDisplay and render it in your App.js.
-Use props to pass the temperature, weather condition, and day/night boolean to the above-mentioned WeatherDisplay component.
-Conditionally render different messages based on the provided props.
-Style the component using inline styles or CSS-in-JS for dynamic styling based on conditions.
+1. Create a new React component named WeatherDisplay and render it in your App.js.
+2. Use props to pass the temperature, weather condition, and day/night boolean to the above-mentioned WeatherDisplay component.
+3. Conditionally render different messages based on the provided props.
+4. Style the component using inline styles or CSS-in-JS for dynamic styling based on conditions.
 */
 
 import { Fragment } from "react";

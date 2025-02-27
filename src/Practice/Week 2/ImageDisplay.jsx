@@ -4,8 +4,8 @@ Create an ImageDisplay component that conditionally renders alternate text when 
 Add a CSS class for styling.
 
 Task:
-Create a new React component named ImageDisplay.
-Use props to pass in the image URL and the alt text information in.
+1. Create a new React component named ImageDisplay.
+2. Use props to pass in the image URL and the alt text information in.
 Hint: JavaScript has many built-in methods for events, including one for errors.
 */
 

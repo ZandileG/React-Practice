@@ -6,11 +6,11 @@ and an array of replies. Each reply should be structured similarly to the main c
 (i.e. it should have an author, content), allowing for multiple levels of nesting.
 
 Task:
-Create a new React component named NestedComment.
-Use props to pass the comment data to the component, including nested replies. 
+1. Create a new React component named NestedComment.
+2. Use props to pass the comment data to the component, including nested replies. 
 (You can create this comment object with nested replies, as stated above, to pass in as a prop).
-Render the comments and their nested replies recursively (use one of the Array methods).
-Style the component using an external CSS file to visually differentiate between comment levels.
+3. Render the comments and their nested replies recursively (use one of the Array methods).
+4. Style the component using an external CSS file to visually differentiate between comment levels.
 */
 
 /*Solutions*/
