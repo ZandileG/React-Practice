@@ -15,12 +15,33 @@ Add word count tracking.
 Show a warning when 20 or fewer characters are left.
 */
 
-import React from "react";
+import { useState } from "react";
+import { Fragment } from "react";
 
 export default function TweetComposer(){
 
+    const maxChars = 280;
+    const [tweet, setTweet] = useState("");
 
-    /*return(
+    function handleChange(event){
+        setTweet(event.target.value);
+    }
 
-    );*/
+    function resetTweet(){
+        setTweet("");
+    }
+
+    return(
+        <Fragment>
+        <h1>Compose Tweet</h1>
+        <textarea value={tweet} onChange={handleChange} rows="4"></textarea>
+
+        <div>
+            <span>{maxChars - tweet.length} characters left</span>
+            <button onClick={resetTweet}>Reset</button>
+        </div>
+
+            <button disabled={tweet.length > maxChars}>Tweet</button>
+        </Fragment>    
+    );
 }

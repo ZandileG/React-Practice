@@ -8,6 +8,7 @@
 */ 
 
 import React from "react";
+import { Fragment } from "react";
 
 export default function NameList(){
     const names = ["Alice", "Bob", "Charlie", "Diana"];
@@ -17,6 +18,9 @@ export default function NameList(){
 ); 
 
     return(
+        <Fragment>
+        <h1>Name List</h1>
         <ul>{listItems}</ul>
+        </Fragment>
     );
 }

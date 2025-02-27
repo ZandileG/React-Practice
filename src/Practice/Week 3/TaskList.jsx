@@ -8,8 +8,36 @@
 6. You can take this example further by ensuring that the input box is cleared whenever a new task is added, and also adding 'edit' and 'delete' buttons to each task as well as their corresponding functionality.
 */
 
-import React from "react";
+import { useState } from "react";
+import { Fragment } from "react";
 
 export default function TaskList(){
 
+    const[tasks, setTasks] = useState([]);
+    const[task, setTask] = useState("");
+
+    const updateInfo = (e) =>{
+        setTask(e.target.value);
+    };
+
+    const addTask = ()=>{
+        if (task.trim()!==""){
+            setTasks([...tasks, task]);
+            setTask("");
+        }
+    };
+
+    return(
+        <Fragment>
+        <h1>Task List</h1>
+        <ul>
+            {tasks.map((task, index)=>(
+            <li key={index}>{task}</li>
+        ))}
+        </ul>
+
+        <input type="text" value={task} onChange={updateInfo} />
+        <button type="button" onClick={addTask}>Add Task</button>
+        </Fragment>    
+        );
 }

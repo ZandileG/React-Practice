@@ -8,8 +8,30 @@
 5. Use useState to manage the input value.
 */
 
-import React from "react";
+import { Fragment } from "react";
+import { useState } from "react";
 
 export default function SimpleForm(){
 
+    const [info, setInfo] = useState ("");
+
+    const updateInfo = (e) =>{
+        setInfo (e.target.value);
+    };
+
+    const handleClick = (e) =>{
+        e.preventDefault();
+        alert(`You entered ${info}`);
+        setInfo("");
+    };
+
+    return(
+    <Fragment>
+        <h1>Simple Form</h1>
+        <form onSubmit={handleClick}>
+        <input type="text" value={info} onChange={updateInfo} name="name" />
+        <button type="submit">Submit</button>
+        </form>
+    </Fragment>
+    );
 }
