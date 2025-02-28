@@ -8,8 +8,7 @@
 5. Use useState to manage the input value.
 */
 
-import { Fragment } from "react";
-import { useState } from "react";
+import { Fragment, useState } from "react";
 
 export default function SimpleForm(){
 
@@ -35,3 +34,5 @@ export default function SimpleForm(){
     </Fragment>
     );
 }
+
+/**/

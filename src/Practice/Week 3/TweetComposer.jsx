@@ -15,8 +15,7 @@ Add word count tracking.
 Show a warning when 20 or fewer characters are left.
 */
 
-import { useState } from "react";
-import { Fragment } from "react";
+import { Fragment, useState } from "react";
 
 export default function TweetComposer(){
 
@@ -45,3 +44,5 @@ export default function TweetComposer(){
         </Fragment>    
     );
 }
+
+/**/

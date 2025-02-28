@@ -8,8 +8,7 @@
 6. You can take this example further by ensuring that the input box is cleared whenever a new task is added, and also adding 'edit' and 'delete' buttons to each task as well as their corresponding functionality.
 */
 
-import { useState } from "react";
-import { Fragment } from "react";
+import { Fragment, useState } from "react";
 
 export default function TaskList(){
 
@@ -41,3 +40,5 @@ export default function TaskList(){
         </Fragment>    
         );
 }
+
+/**/
