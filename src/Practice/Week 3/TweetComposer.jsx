@@ -1,4 +1,4 @@
-/*Real-Time Character Countdown (Tweet Composer)
+/*Extra: Real-Time Character Countdown (Tweet Composer)
 
 Task:
 *As an extra CSS exercise, quickly compose CSS to recreate a 'tweet' style composition input box.
@@ -44,5 +44,3 @@ export default function TweetComposer(){
         </Fragment>    
     );
 }
-
-/**/

@@ -1,4 +1,3 @@
-
 /*Exercise Question 2: Simple Input Form
 
 1. Create a React component called SimpleForm.
@@ -34,5 +33,3 @@ export default function SimpleForm(){
     </Fragment>
     );
 }
-
-/**/

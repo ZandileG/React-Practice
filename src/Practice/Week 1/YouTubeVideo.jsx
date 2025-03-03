@@ -1,6 +1,6 @@
 import { Fragment } from "react";
 
-function YouTubeVideo({ image, title, channel, views }){
+export default function YouTubeVideo({ image, title, channel, views }){
     return (
     <Fragment>
     <img src={image} alt="Thumbnail"/>
@@ -10,5 +10,3 @@ function YouTubeVideo({ image, title, channel, views }){
     </Fragment>
     );
 }
-
-export default YouTubeVideo;

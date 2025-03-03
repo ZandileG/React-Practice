@@ -1,7 +1,7 @@
 import React from "react";
 import YouTubeVideo from "./YouTubeVideo";
 
-function YouTubeVideoList(){
+export default function YouTubeVideoList(){
 
 const ytList = [
     {
@@ -36,5 +36,3 @@ const ytList = [
         )}</div>
     );
 } 
-
-export default YouTubeVideoList;

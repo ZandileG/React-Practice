@@ -1,6 +1,6 @@
 import "./VideoStatus.css";
 
-function VideoStatus(prop){  
+export default function VideoStatus(prop){  
     const status = false;
 
     return(
@@ -9,5 +9,3 @@ function VideoStatus(prop){
         </div>
     );
 }
-
-export default VideoStatus;
