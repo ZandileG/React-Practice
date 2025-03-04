@@ -1,5 +1,4 @@
 /*Exercise 3: Auto-Save Form Data
-
 You are building a form where users can input data. To improve the user experience, you want to implement an auto-save feature that saves the form data to local storage every 2 seconds after the user stops typing.
 
 Task:

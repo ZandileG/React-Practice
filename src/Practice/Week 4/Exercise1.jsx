@@ -1,5 +1,4 @@
 /*Exercise 1: Fetching Data with Pagination
-
 You are building a table component that fetches data from an API. The API supports pagination, and you want to fetch new data whenever the user changes the page (this is a standard feature in applications that display large datasets, like dashboards, e-commerce product lists, or admin panels).
 
 Task:
