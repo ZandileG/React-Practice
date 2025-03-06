@@ -1,7 +1,7 @@
 import "./VideoStatus.css";
 
-export default function VideoStatus(prop){  
-    const status = false;
+export default function VideoStatus(){  
+    const status = true;
 
     return(
     <div>

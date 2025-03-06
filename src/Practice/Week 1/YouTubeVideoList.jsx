@@ -26,9 +26,9 @@ const ytList = [
 
     return(
         <div>{
-            ytList.map((video, i) => 
+            ytList.map((video, index) => 
             <YouTubeVideo 
-            key = {i}
+            key = {index}
             image = {video.image}
             title = {video.title} 
             channel = {video.channel} 

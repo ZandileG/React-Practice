@@ -1,11 +1,8 @@
 import "./App.css";
 import React from "react";
-/*import YouTubeVideo from "./Practice/Week 1/YouTubeVideo";
-  import YouTubeVideoList from "./Practice/Week 1/YouTubeVideoList";
-  import VideoStatus from "./Practice/Week 1/VideoStatus";
+import WeatherDisplay from "./Practice/Week 2/WeatherDisplay";
 
-  import WeatherDisplay from "./Practice/Week 2/WeatherDisplay";
-  import ImageDisplay from "./Practice/Week 2/ImageDisplay";
+  /*import ImageDisplay from "./Practice/Week 2/ImageDisplay";
   import NestedComment from "./Practice/Week 2/NestedComment";
 
   import TaskList from "./Practice/Week 3/TaskList";
@@ -21,17 +18,11 @@ export default function App(){
 
   return (
     <div className="App">
-
+        <WeatherDisplay />
     </div>
   );
 }
-
-/*<VideoStatus />
-  <YouTubeVideo />
-  <YouTubeVideoList />
-
-  <WeatherDisplay />
-  <ImageDisplay />
+  /*<ImageDisplay />
   <NestedComment />
 
   <NameList />
