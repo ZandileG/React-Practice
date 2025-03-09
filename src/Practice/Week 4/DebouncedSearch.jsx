@@ -12,7 +12,7 @@ Use useEffect to set up a debounce mechanism with setTimeout.
 Clear the timeout on clean-up to avoid memory leaks.
 */
 
-import React, { Fragment } from "react";
+import React, { useEffect, Fragment } from "react";
 
 export default function DebouncedSearch(){
 

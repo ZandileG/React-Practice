@@ -14,7 +14,7 @@ Use useEffect to load the saved data from local storage when the component mount
 Clean up the debounce timer in the useEffect clean-up function.
 */
 
-import React, { Fragment } from "react";
+import React, { useEffect, Fragment } from "react";
 
 export default function AutoSaveForm(){
    /* return(

@@ -16,7 +16,7 @@ Use window.addEventListener("online", callback) and window.addEventListener("off
 Clean up event listeners inside the cleanup function of useEffect.
 */
 
-import React, { Fragment } from "react";
+import React, { useEffect, Fragment } from "react";
 
 export default function NetworkStatus(){
 

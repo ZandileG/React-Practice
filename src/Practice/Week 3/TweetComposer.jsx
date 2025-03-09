@@ -16,6 +16,7 @@ Show a warning when 20 or fewer characters are left.
 */
 
 import React, { Fragment, useState } from "react";
+import "./TweetComposer.css";
 
 //Solution
 export default function TweetComposer(){
@@ -34,14 +35,14 @@ export default function TweetComposer(){
     return(
         <Fragment>
         <h1>Compose Tweet</h1>
-        <textarea value={tweet} onChange={handleChange} rows="4"></textarea>
+        <textarea className="tweet-input" value={tweet} onChange={handleChange} rows="4"></textarea>
 
         <div>
-            <span>{maxChars - tweet.length} characters left</span>
-            <button onClick={resetTweet}>Reset</button>
+            <span className="warning">{maxChars - tweet.length} characters left </span>
+            <button className="tweet-button" onClick={resetTweet}>Reset</button>
         </div>
 
-            <button disabled={tweet.length > maxChars}>Tweet</button>
+            <button className="tweet-button" disabled={tweet.length > maxChars}>Tweet</button>
         </Fragment>    
     );
 }
