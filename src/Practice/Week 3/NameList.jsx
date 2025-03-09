@@ -7,8 +7,7 @@
 5. Ensure each <li> has a unique key using the index of the array.
 */ 
 
-import React from "react";
-import { Fragment } from "react";
+import React, { Fragment } from "react";
 
 export default function NameList(){
     const names = ["Alice", "Bob", "Charlie", "Diana"];

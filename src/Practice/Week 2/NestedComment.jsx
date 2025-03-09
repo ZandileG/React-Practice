@@ -13,10 +13,10 @@ Task:
 4. Style the component using an external CSS file to visually differentiate between comment levels.
 */
 
-/*Solutions*/
 import React  from "react";
 import "./NestedComment.css";
 
+//Solution
 export default function NestedComment({comment}){   
     
     <h1>Nested Comments</h1> 

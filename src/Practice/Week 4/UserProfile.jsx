@@ -13,9 +13,13 @@ JavaScript has an in-built method called AbortController for cases such as these
 Remember to try to handle potential errors in fetching data. 
 */ 
 
+import React, { Fragment } from "react";
+
 export default function UserProfile(){
 
-    /* return(
- 
-     );*/
- }
+   /* return(
+    <Fragment>
+    <div></div>
+    </Fragment>
+    );*/
+}

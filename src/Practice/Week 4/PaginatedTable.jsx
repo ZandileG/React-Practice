@@ -12,3 +12,14 @@ Use useState to manage the current page and the fetched data.
 Use useEffect to fetch data when the page changes.
 You can use the API URL (https://jsonplaceholder.typicode.com/posts?_page=1&_limit=10) which limits the data response to 10 entries. *consider the 'page' variable in the API URL. 
 */ 
+
+import React, { Fragment } from "react";
+
+export default function PaginatedTable(){
+
+   /* return(
+    <Fragment>
+    <div></div>
+    </Fragment>
+    );*/
+}

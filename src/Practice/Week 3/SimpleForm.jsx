@@ -7,13 +7,20 @@
 5. Use useState to manage the input value.
 */
 
-import { Fragment, useState } from "react";
+import React, { Fragment, useState } from "react";
 
+//Solution
 export default function SimpleForm(){
 
+/*info is the state variable that will hold the current value of the text input field.
+  setInfo is the function used to update the info state.
+  useSate("") initialises the info state with an empty string.*/
     const [info, setInfo] = useState ("");
 
+//This function is used to update the state info whenever the user types in the input field.
     const updateInfo = (e) =>{
+        
+      //This updates the info state with the value the user typed
         setInfo (e.target.value);
     };
 

@@ -15,8 +15,9 @@ Add word count tracking.
 Show a warning when 20 or fewer characters are left.
 */
 
-import { Fragment, useState } from "react";
+import React, { Fragment, useState } from "react";
 
+//Solution
 export default function TweetComposer(){
 
     const maxChars = 280;
