@@ -20,10 +20,17 @@ export default function ImageDisplay(){
     }
 
    function imageError(e){
+    /*This targets the element that triggered the event (e.target), which is the <img> element.
+      It adds the hidden class to that element, effectively hiding it from view when an error occurs*/
         e.target.classList.add("hidden");
+
+    /*This refers to the next sibling node in the DOM, which is the alt paragraph text. 
+      The next sibling should be shown when the image fails to load.
+      It removes the hidden class from that next sibling, making it visible.*/    
         e.target.nextSibling.classList.remove("hidden"); 
     }
 
+    //The onError event is triggered if an error occurs while loading an external file.
     return(
         <Fragment>
         <h1>Image Display</h1>

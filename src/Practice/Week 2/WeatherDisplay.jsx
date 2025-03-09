@@ -15,9 +15,9 @@ import { Fragment } from "react";
 
 export default function WeatherDisplay(){
     const weather = {
-        temperature: 25  +"ºC",
-        condition: "Sunny",
-        isDay: true,
+        temperature: -5  +"ºC",
+        condition: "Snowy",
+        isDay: false,
     };
 
     const weatherMessage = function (){
