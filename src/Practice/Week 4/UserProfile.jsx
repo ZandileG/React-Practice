@@ -17,11 +17,14 @@ import React, { useEffect, Fragment } from "react";
 
 export default function UserProfile(){
 
-   /* return(
+
+
+   return(
     <Fragment>
-    <div>
-    
-    </div>
+    <h1>User Profile</h1>
+
+
+
     </Fragment>
-    );*/
+    );
 }

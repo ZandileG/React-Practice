@@ -18,9 +18,14 @@ import React, { useEffect, Fragment } from "react";
 
 export default function PaginatedTable(){
 
-   /* return(
+
+
+   return(
     <Fragment>
-    <div></div>
+    <h1>Paginated Table</h1>
+
+
+
     </Fragment>
-    );*/
+    );
 }

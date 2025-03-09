@@ -20,9 +20,14 @@ import React, { useEffect, Fragment } from "react";
 
 export default function NetworkStatus(){
 
-   /* return(
+
+
+   return(
     <Fragment>
-    <div></div>
+    <h1>Network Status</h1>
+
+    
+    
     </Fragment>
-    );*/
+    );
 }
