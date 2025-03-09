@@ -1,13 +1,11 @@
 import "./App.css";
 import React from "react";
-  
-import NestedComment from "./Practice/Week 2/NestedComment";
+import NameList from "./Practice/Week 3/NameList";
 
 /*
+  import SimpleForm from "./Practice/Week 3/SimpleForm";
   import TaskList from "./Practice/Week 3/TaskList";
   import TweetComposer from "./Practice/Week 3/TweetComposer";
-  import NameList from "./Practice/Week 3/NameList";
-  import SimpleForm from "./Practice/Week 3/SimpleForm";
 
   import ToDoList from "./Practice/Week 4/ToDoList";
   import UserProfile from "./Practice/Week 4/UserProfile";
@@ -16,14 +14,13 @@ import NestedComment from "./Practice/Week 2/NestedComment";
 export default function App(){
   return (
     <div className="App">
-        <NestedComment />
+        <NameList />
     </div>
   );
 }
   /*
-  <NameList />
-  <TaskList />
   <SimpleForm />
+  <TaskList />
   <TweetComposer />
 
   <ToDoList />
