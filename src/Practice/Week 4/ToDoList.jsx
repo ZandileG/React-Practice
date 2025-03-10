@@ -1,4 +1,5 @@
 /*Exercise Question 1: To Do List
+
 Create a To-do List app that allows users to add items to a list and mark them as completed. 
 Use the useState hook to manage the state of the to-do list. This exercise only uses the useState hook
 

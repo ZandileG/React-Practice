@@ -1,4 +1,5 @@
 /*Exercise 1: Fetching Data with Pagination
+
 You are building a table component that fetches data from an API. The API supports pagination, and you want to fetch new data whenever the user changes the page 
 (this is a standard feature in applications that display large datasets, like dashboards, e-commerce product lists, or admin panels).
 
@@ -56,7 +57,7 @@ export default function PaginatedTable(){
     <Fragment>
     <h1>Paginated Table</h1>
 
-    <table>
+    <table style={{border: "solid black 1px"}}>
     <thead>
       <tr><th>Id</th><th>Title</th></tr>
     </thead>
@@ -68,22 +69,21 @@ export default function PaginatedTable(){
         <td>{item.title}</td>
       </tr>
     ))}
-      </tbody>
+    </tbody>
     </table>
 
     <div>
-    <button onClick={/*"Previous" button: Decreases page by 1.Disabled if page === 1 (to prevent negative pages).
-                       "Next" button: Increases page by 1.*/
+    <button onClick={//"Previous" button: Decreases page by 1.Disabled if page === 1 (to prevent negative pages).
       () => setPage((prev) => Math.max(prev -1, 1))} 
             disabled={page === 1}>Previous</button>
 
     <span>Page {page}</span>
-    <button onClick={()=> setPage((prev) => prev + 1)}>Next</button>
+    <button onClick={//"Next" button: Increases page by 1.
+      ()=> setPage((prev) => prev + 1)}>Next</button>
     </div>
 
     {/*Displays "Loading..." when fetching data.
        Displays an error message in red if the request fails.*/
-      
     loading && <p>Loading...</p>}
     {error && <p style={{color: "red"}}>{error}</p>}
     </Fragment>
