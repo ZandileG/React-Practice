@@ -16,26 +16,36 @@ Use window.addEventListener("online", callback) and window.addEventListener("off
 Clean up event listeners inside the cleanup function of useEffect.
 */
 
+//Solution
 import React, { useState, useEffect, Fragment } from "react";
 
-export default function NetworkStatus(){
+function OnlineStatus(){
 
- const[, set] = useState();
+//navigator.onLine: Checks the current online status.
+//seState(navigator.onLine): Sets the initial state of isOnline to true (if online) or false (if offline).
+ const[isOnline, setIsOnline] = useState(navigator.onLine);
 
     useEffect(() => {
+      const handleOnline = () => setIsOnline(true);
+      const handleOffline = () => setIsOnline(false);
 
+    //Listens for online/offline status changes.
+      window.addEventListener("online", handleOnline);
+      window.addEventListener("offline", handleOffline); 
 
+    //Removes event listeners when the component unmounts to prevent memory leaks.
       return () =>{
-
+        window.removeEventListener("online", handleOnline);
+        window.removeEventListener("offline", handleOffline);   
       }
     }, []);
 
    return(
     <Fragment>
     <h1>Network Status</h1>
-
-    
-    
+    <p>{isOnline ? "🟢 Online" : "🔴 Offline"}</p>
     </Fragment>
     );
 }
+
+export default OnlineStatus;
