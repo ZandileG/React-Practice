@@ -100,7 +100,7 @@ function MyButton(){
 
 //Updating the screen
 //Count the number of times a button is clicked by adding a state to your component.
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 export default function MyApp(){
     return (
@@ -154,4 +154,16 @@ function MyButton({ count, onClick }){
     );
 }
 
-/*{()=> setCount(count - 1)} */
+//Intro to UseEffect Hook
+
+import { useEffect } from "react";
+
+useEffect(() => {
+    //run code when component mounts or updates (1)
+
+    return () =>{
+    //run code when component is removed from the DOM (2)
+    }
+
+    //dependency list/array: code run only once
+}, [])// (1) code runs when state changes
