@@ -1,7 +1,15 @@
-.App {
+.App{
   text-align: center;
 }
 
 li{
   list-style: none;
+}
+
+table{
+  margin: auto;
+}
+
+table td{
+  text-align: justify;
 }
