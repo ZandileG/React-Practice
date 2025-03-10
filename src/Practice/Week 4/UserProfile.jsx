@@ -13,11 +13,19 @@ JavaScript has an in-built method called AbortController for cases such as these
 Remember to try to handle potential errors in fetching data. 
 */ 
 
-import React, { useEffect, Fragment } from "react";
+import React, { useState, useEffect, Fragment } from "react";
 
 export default function UserProfile(){
 
+ const[, set] = useState();
 
+    useEffect(() => {
+
+
+      return () =>{
+
+      }
+    }, []);
 
    return(
     <Fragment>
