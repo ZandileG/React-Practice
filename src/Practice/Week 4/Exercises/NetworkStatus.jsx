@@ -23,7 +23,7 @@ Clean up event listeners inside the cleanup function of useEffect.
 //Solution
 import React, { useState, useEffect, Fragment } from "react";
 
-function OnlineStatus(){
+function NetworkStatus(){
 
 //navigator.onLine: Checks the current online status.
 //seState(navigator.onLine): Sets the initial state of isOnline to true (if online) or false (if offline).
@@ -52,4 +52,4 @@ function OnlineStatus(){
     );
 }
 
-export default OnlineStatus;
+export default NetworkStatus;
