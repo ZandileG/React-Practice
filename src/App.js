@@ -1,13 +1,18 @@
 import "./App.css";
 import React from "react";
-import Nav from "./Practice/Week 5/Examples/Avoid Prop Drilling/Nav";
+import Login from "./Practice/Week 5/Examples/Example 2/Pages/Login";
+import Dashboard from "./Practice/Week 5/Examples/Example 2/Pages/Dashboard";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 function App(){
   return (
-   <div>
-
-   </div>
+   <BrowserRouter>
+   <Routes>
+    <Route path="/" element={<Login />} />
+    <Route path="/dashboard" element={<Dashboard />} />
+    <Route path="*" element={<Login />} />
+z   </Routes>
+   </BrowserRouter>
   );
 }
 
