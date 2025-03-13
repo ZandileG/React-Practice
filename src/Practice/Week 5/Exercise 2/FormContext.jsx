@@ -12,3 +12,19 @@ Create a FormContext to store form data and a function to update it.
 Use useContext to access and update form data in each step.
 Use useNavigate to navigate between steps.
 */
+
+import React from "react";
+
+
+
+function FormContext() {
+
+
+  return (
+    <div>
+      
+    </div>
+  );
+}
+
+export default FormContext;

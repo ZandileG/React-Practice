@@ -12,3 +12,15 @@ Create a SettingsContext to store theme and language settings.
 Use useContext to access and update the settings in the UI.
 Use conditional rendering and CSS to apply the selected theme and language.
 */
+
+import React from "react";
+
+function SettingsContext() {
+  return (
+    <div>
+      
+    </div>
+  );
+}
+
+export default SettingsContext;
