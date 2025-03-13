@@ -1,11 +1,13 @@
 import "./App.css";
 import React from "react";
-import Nav from "./Practice/Week 5/Examples/Drilling/Nav";
+import Nav from "./Practice/Week 5/Examples/Avoid Prop Drilling/Nav";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 function App(){
   return (
-   <div><Nav /></div>
+   <div>
+
+   </div>
   );
 }
 

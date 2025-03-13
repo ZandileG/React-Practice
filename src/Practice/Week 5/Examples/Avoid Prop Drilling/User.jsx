@@ -1,11 +1,11 @@
 import React from "react";
 
-function User() {
+function User({name, age}) {
 
   return (
     <div>
-      <h3>Name</h3>
-      <h3>Age</h3>
+      <h2>Name: {name}</h2>
+      <h2>Age: {age}</h2>
     </div>
   );
 }

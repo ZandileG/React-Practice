@@ -10,7 +10,7 @@ const user = {
   return (
     <div>
       <h1>YouTube Navigation</h1>
-      <Header />
+      <Header name={user.name} age={user.age}/>
     </div>
   )
 }
