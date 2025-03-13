@@ -1,5 +1,4 @@
 /*Exercise 2:
-
 Build a multi-step form (e.g., a registration form, Tinder signup form, etc.) where form data is shared across steps using Context.
 
 Requirements:

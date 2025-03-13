@@ -1,5 +1,4 @@
 /*Exercise 3:
-
 Build an application that supports both theme (light/dark) and language (English/Spanish) toggling using Context.
 
 Requirements:
@@ -13,9 +12,11 @@ Use useContext to access and update the settings in the UI.
 Use conditional rendering and CSS to apply the selected theme and language.
 */
 
-import React from "react";
+import React, { useContext } from "react";
 
-function SettingsContext() {
+const SettingsContext = useContext();
+
+function SettingsProvider() {
   return (
     <div>
       
@@ -23,4 +24,4 @@ function SettingsContext() {
   );
 }
 
-export default SettingsContext;
+export default SettingsProvider;
