@@ -14,6 +14,7 @@ You can use the mock product list, and product details, below.
 */
 
 import React from "react";
+import { Link } from "react-router-dom";
 
 function ProductList(){
 //Product List:
@@ -25,8 +26,14 @@ const products = [
 
   return (
     <div>
-      
-    </div>
+      <h1>Product List</h1>
+      <ul>
+      {products.map((product) => (
+      <li key = {product.id}>
+        <Link to={`products/${product.id}`}>
+        {product.name}: R{product.price}</Link>
+      </li>
+      ))}</ul></div>
   );
 }
 

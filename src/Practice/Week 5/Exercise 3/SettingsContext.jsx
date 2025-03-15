@@ -12,7 +12,9 @@ Use useContext to access and update the settings in the UI.
 Use conditional rendering and CSS to apply the selected theme and language.
 */
 
-import React, { useContext } from "react";
+import React, { useContext, useState, useEffect, Fragment} from "react";
+import { useParams } from "react-router-dom";
+
 
 const SettingsContext = useContext();
 
