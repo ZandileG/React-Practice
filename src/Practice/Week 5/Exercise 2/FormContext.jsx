@@ -12,18 +12,26 @@ Use useContext to access and update form data in each step.
 Use useNavigate to navigate between steps.
 */
 
-import React, { useState, useEffect, Fragment} from "react";
-import { useParams } from "react-router-dom";
+import React, { createContext, useEffect, useState} from "react";
 
+export const FormContext = createContext();
 
-function FormContext() {
+function FormProvider({ children }) {
+  const [storeData, setStoreData] = useState(null);
 
+  useEffect(() => {
+    //Use the solutions to see how to store form data
+  })
+
+  function updateForm(){
+    setStoreData();
+  }
 
   return (
-    <div>
-      
-    </div>
+    <FormContext.Provider value={{ storeData, updateForm}}>
+      {children}
+    </FormContext.Provider>
   );
 }
 
-export default FormContext;
+export default FormProvider;

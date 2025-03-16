@@ -1,12 +1,17 @@
-import React, { useState, useEffect, Fragment} from "react";
-import { useParams } from "react-router-dom";
-
+import React, { useContext} from "react";
+import { SettingsContext } from "./SettingsContext";
 
 function Navbar() {
+  const {theme, toggleTheme} = useContext(SettingsContext);
+
   return (
-    <div>
+    <section style={{background: theme === "light" ? "white" : "black", 
+                     color: theme === "light" ? "black" : "white"}}>
       
-    </div>
+    <h1>Navbar</h1>
+
+    <button onClick={toggleTheme}>Toggle Theme</button>
+    </section>
   );
 }
 

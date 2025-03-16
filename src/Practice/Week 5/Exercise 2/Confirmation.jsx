@@ -1,15 +1,19 @@
-import React, { useState, useEffect, Fragment} from "react";
-import { useParams } from "react-router-dom";
-
+import React, { Fragment} from "react";
+import { useNavigate } from "react-router-dom";
 
 function Confirmation() {
+const navigate = useNavigate();
 
-
+function handleSubmit(){
+  alert("You have successfully submitted the form!");
+  navigate("/");
+}
     
   return (
-    <div>
-      
-    </div>
+    <Fragment>
+      <h1>Confirmation</h1>  
+      <button onClick={handleSubmit}>Submit</button>
+    </Fragment>
   );
 }
 

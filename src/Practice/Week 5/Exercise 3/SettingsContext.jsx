@@ -12,17 +12,26 @@ Use useContext to access and update the settings in the UI.
 Use conditional rendering and CSS to apply the selected theme and language.
 */
 
-import React, { useContext, useState, useEffect, Fragment} from "react";
-import { useParams } from "react-router-dom";
+import React, { createContext, useState} from "react";
 
+export const SettingsContext = createContext();
 
-const SettingsContext = useContext();
+function SettingsProvider({ children }) {
+  const [theme, setTheme] = useState("light");
+  const [language, setLanguage] = useState("English");
 
-function SettingsProvider() {
+  function toggleTheme(){
+    setTheme((prevTheme) => (prevTheme === "light" ? "dark" : "light"));
+  }
+
+  function toggleLanguage(){
+    setLanguage((prevLanguage) => (prevLanguage === "English" ? "Spanish" : "English"));
+  }
+
   return (
-    <div>
-      
-    </div>
+    <SettingsContext.Provider value={{theme, toggleTheme, language, toggleLanguage }}>
+      {children}
+    </SettingsContext.Provider>
   );
 }
 
