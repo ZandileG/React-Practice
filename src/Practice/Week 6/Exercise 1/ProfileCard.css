@@ -1,0 +1,19 @@
+/*Exercise 1: Styling a Profile Card Component
+Create a simple profile card component and apply CSS to style it.
+Components can be individually styled using CSS in React. This exercise will focus on creating a ProfileCard component and applying CSS to make it visually appealing.
+
+Task:
+In your App.js, define a ProfileCard component (JSX code below).
+Inside the ProfileCard, there is a div that will serve as the card container.
+Inside the card container div, there is an image tag for the profile picture, a heading for the name, and a paragraph for the bio.
+Create a CSS file named ProfileCard.css and import it into your ProfileCard component.
+Write CSS to style the profile card:
+Set a maximum width for the card and centre it on the page.
+Apply a border and some padding to the card.
+Style the image to be rounded and centred at the top of the card.
+Make the name stand out and the bio be just below the name.
+ 
+
+Expected Outcome: A centered profile card on the page with a rounded image at the top, a heading for the name, and a paragraph for the bio, all styled with CSS.
+*/
+

@@ -1,0 +1,28 @@
+/*Exercise 3: Creating and Styling a Responsive Grid Layout
+
+Implement a responsive grid layout for a series of content cards.
+Create a Grid component that renders multiple ContentCard components in a responsive grid layout. Style the grid and cards to be responsive to different screen sizes.
+
+Task:
+Create two new components: Grid.jsx and ContentCard.jsx (JSX code below).
+In Grid,  a div is returned that will act as the grid container and render multiple ContentCard components.
+In ContentCard, a div is returned with some placeholder content (like an image, title, and text).
+Create a file named Grid.css and import it into Grid.jsx.
+Write CSS rules in ContentCard.css to:
+Give the card a shadow and make it slightly round. Make sure there is some space between the content and the edges of the border.
+Make the placeholder image slightly round.
+The card should grow slightly when hovered upon.
+Write CSS rules in Grid.css to:
+Define a grid layout that has 3 columns by default.
+Create a responsive design using media queries to drop to 2 columns for tablets and 1 column for mobile screens.
+Ensure that the content cards have some space between them.
+Import and render the Grid component within your App.js.
+
+
+Note:
+Replace "placeholder-image.jpg" with the actual image URL you want to use.
+Add more ContentCard components inside the Grid component if you want to test the layout with more cards. See what it might look like.
+Feel free to adjust the CSS properties to match your design preferences. The above are guidelines, use your intuition to guide what you want to see and apply it using CSS.
+Test the responsiveness by resizing your browser window or using the browser's developer tools to simulate different devices (it should work both ways)
+*/
+
