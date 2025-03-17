@@ -8,10 +8,12 @@ Create two new components: Grid.jsx and ContentCard.jsx (JSX code below).
 In Grid,  a div is returned that will act as the grid container and render multiple ContentCard components.
 In ContentCard, a div is returned with some placeholder content (like an image, title, and text).
 Create a file named Grid.css and import it into Grid.jsx.
+
 Write CSS rules in ContentCard.css to:
 Give the card a shadow and make it slightly round. Make sure there is some space between the content and the edges of the border.
 Make the placeholder image slightly round.
 The card should grow slightly when hovered upon.
+
 Write CSS rules in Grid.css to:
 Define a grid layout that has 3 columns by default.
 Create a responsive design using media queries to drop to 2 columns for tablets and 1 column for mobile screens.

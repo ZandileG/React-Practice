@@ -1,12 +1,14 @@
 /*Exercise 2: Creating a Responsive Navigation Bar
 
 Build and style a responsive navigation bar with CSS that adapts to different screen sizes.
-Responsive design is crucial for modern web applications—this exercise will focus on creating a navigation bar that changes layout depending on the screen size using media queries.
+Responsive design is crucial for modern web applications—this exercise will focus on creating a 
+navigation bar that changes layout depending on the screen size using media queries.
 
 Task:
 In your App.js, define a NavBar component (JSX code below).
 Inside the NavBar component, there is a nav element with a logo (can be text) and a list of links.
 Create a CSS file named NavBar.css and import it into your NavBar component.
+
 Write CSS to style the navigation bar:
 Use flexbox to horizontally align the logo and navigation links.
 Ensure the navigation links are on the right side of the bar, and the logo is on the left.
