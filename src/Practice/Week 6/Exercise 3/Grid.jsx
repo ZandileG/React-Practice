@@ -8,7 +8,9 @@ function Grid() {
       <ContentCard />
       <ContentCard />
       <ContentCard />
-      {/* Add more ContentCard components as needed */}
+      <ContentCard />
+      <ContentCard />
+      <ContentCard />
     </div>
   );
 };

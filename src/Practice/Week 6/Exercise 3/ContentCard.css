@@ -1,3 +1,39 @@
+/*Write CSS rules in ContentCard.css to:
+Give the card a shadow and make it slightly round. 
+Make sure there is some space between the content and the edges of the border.
+Make the placeholder image slightly round.
+The card should grow slightly when hovered upon.
+*/
+
 .content-card{
-    
+    max-width: 400px;
+    margin: auto;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    box-shadow: 10px 5px 5px lightgray;
+    border: 1px solid black;
+    border-radius: 25px;
+    transition: transform 0.2s;
+}
+
+.content-card h2, p{
+    padding-left: 25px;
+    padding-right: 25px;
+    padding-bottom: 10px;
+}
+
+.card-image{
+    max-width: 100%;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+}
+
+.content-card:hover{
+    transform: scale(1.05); 
+}
+
+@media screen and (max-width: 1200px){
+    .content-card{
+        max-width: 300px;
+    }
 }
