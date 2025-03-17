@@ -16,3 +16,24 @@ Apply padding to the nav element and style the links with some margin.
 Use a media query to stack the logo and navigation links vertically on smaller screens.
 */
 
+.logo{
+    display: flex;
+    justify-self: left;
+    padding: 2rem;
+}
+
+.navLinks{
+    display: flex;
+    justify-content: right;
+    padding-right: 2rem;
+}
+
+.navLinks li{
+    margin: 1rem;
+}
+
+@media screen and (max-width: 600px){
+    .logo, .navLinks{
+        display: block;
+    }
+  }
