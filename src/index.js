@@ -3,14 +3,11 @@ import ReactDOM from "react-dom/client";
 import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
-import FormProvider from "./Practice/Week 5/Exercise 2/FormContext";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-  <FormProvider>
       <App />
-  </FormProvider>
   </React.StrictMode>
 );
 
