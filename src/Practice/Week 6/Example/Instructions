@@ -1,0 +1,17 @@
+1. Define clearly the "favourites" state and it's integration
+- Navigation clearly accessible (Navbar?)
+- Where should state live? Context, Props or State to pass data? (If you're passing info from Home to a Favourites page, I suggest Context)
+
+2. Add clearly defined actions 
+- Add to favourites
+- Remove from favourites
+- Check if already favourited
+
+3. UI Interaction (clearly define)
+- Where to trigger favourites? (modal, card, button? I suggest add a button to your movie modal for simplicity.) 
+
+4. Display favourites
+- Separate page?
+- Reuse existing components? (MovieCard, modal HTML from MoviesList?)
+- Handle empty favourites state clearly
+
