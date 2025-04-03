@@ -3,9 +3,10 @@ import MovieCard from "./MovieCard";
 import axios from "axios";
 import "../../index.css";
 
-function MoviesList() {
+function MoviesList({searchQuery}) {
 
-  const url = "https://api.themoviedb.org/3/movie/top_rated?language=en-US&page=1";
+  const NORMAL_URL = "https://api.themoviedb.org/3/movie/top_rated?language=en-US&page=1";
+  const SEARCH_URL=`https://api.themoviedb.org/3/search/movie?query=${searchQuery}&include_adult=false&language=en-US&page=1`
   const options = {
     method: "GET",
     headers: {
@@ -19,10 +20,24 @@ function MoviesList() {
   const [fadeOut, setFadeOut] = useState(false);
 
 useEffect(() => {
-  axios.get(url, options)
-  .then((res) => setMovies(res.data.results))
-  .catch((err) => console.log(err));
-}, []);
+  async function fetchMovies(){
+    try {
+      const url = searchQuery? SEARCH_URL : NORMAL_URL;
+      const {data} = await axios.get(url, options);
+      setMovies(data.results);
+    } catch (error) {
+      console.log(error);
+    }
+  }
+  //saves processing power
+  const timeOutFunction = setTimeout(() => {
+    fetchMovies();
+  }, 1000);
+
+  return() => {
+    clearTimeout(timeOutFunction);
+  }
+}, [searchQuery]);
 
 const handleClose = () => {
   setFadeOut(true);
@@ -32,7 +47,7 @@ const handleClose = () => {
 }, 500); //CSS animation duration
 };
 
-  return (
+  return(
     <div className="movie-list">
       {movies.map((movie) =>(
         <Fragment key={movie.id}>

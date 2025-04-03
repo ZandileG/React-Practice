@@ -3,7 +3,8 @@ Netflix Features
 1. Sign in (authorisation)
 2. Display movies
 3. Select movie (modal)
-4. Add to favourites
+4. Searchbar
+5. Add to favourites
 
 Task breakdown:
 1. Scafold project folder - folders, pages, components, dependencies

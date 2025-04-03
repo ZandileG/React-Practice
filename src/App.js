@@ -3,7 +3,6 @@ import React, {useContext} from "react";
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import Home from "../src/Netflix/Pages/Home";
 import Login from "../src/Netflix/Pages/Login";
-import Navbar from "../src/Netflix/Components/Navbar";
 import AuthProvider, {AuthContext} from "../src/Netflix/Context/AuthContext";
 
 function ProtectedRoute({children}){
@@ -15,7 +14,6 @@ function App(){
   return (
     <AuthProvider>
     <BrowserRouter>
-    <Navbar />
     <Routes>
     <Route path="/login"element={<Login />} />
     <Route path="/"element={<ProtectedRoute><Home /></ProtectedRoute>} />
