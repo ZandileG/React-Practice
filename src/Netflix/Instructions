@@ -34,4 +34,3 @@ Favourites
 - Separate page?
 - Reuse existing components? (MovieCard, modal HTML from MoviesList?)
 - Handle empty favourites state clearly
-

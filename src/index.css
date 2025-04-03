@@ -29,7 +29,7 @@ code{
   width: 150px;
 }
 
-.navbar button{
+.navbar button, .play{
   background-color: rgb(203, 0, 0);
   padding: 0.5rem 1rem;
   color: white;
@@ -64,7 +64,7 @@ code{
 }
 
 .login{
- width: 150px;
+ width: 250px;
  margin: 0 auto;
 }
 
@@ -86,4 +86,98 @@ code{
   margin-bottom: 1rem;
   margin-left: 4rem;
   font-size: 1rem;
+}
+
+.modal-overlay{
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.80);
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  animation: fadeInModal 0.9s ease;
+}
+
+.modal-overlay.fade-out {
+  animation: fadeOutModal 0.5s ease-out;
+}
+
+@keyframes fadeInModal{
+  from{
+    opacity: 0;
+  } to{
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOutModal{
+  from{
+    opacity: 1;
+  } to{
+    opacity: 0;
+  }
+}
+
+.modal-content{
+  position: relative;
+  max-width: 1000px;
+}
+
+.modal-backdrop{
+  width: 100%;
+  border-radius: 8px;
+  filter: brightness(60%);
+}
+
+.modal-info{
+  padding-left: 3rem;
+  padding-right: 3rem;
+  padding-bottom: 2rem;
+  position: absolute;
+  bottom: 0;
+}
+
+.modal-info h1{
+  font-size: 1.4rem;
+}
+
+.modal-info p{
+  font-size: 1rem;
+  line-height: 1.3rem;
+}
+
+.close{
+  font-weight: bolder;
+  font-size: medium;
+  color: rgb(255, 255, 255);
+  background-color: rgb(0, 0, 0);
+  width: 2rem;
+  height: 2rem;
+  border: solid rgb(255, 255, 255) 1px;
+  border-radius: 50%;
+  top: 1rem;
+  right: 1rem;
+  position: absolute;
+  cursor: pointer;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 4px;
+}
+
+::-webkit-scrollbar-track {
+  background: black;
+}
+
+::-webkit-scrollbar-thumb {
+  background: grey;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: black;
 }

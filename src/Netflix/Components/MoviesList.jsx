@@ -16,12 +16,21 @@ function MoviesList() {
 
   const [movies, setMovies] = useState([]);
   const [selectedMovie, setSelectedMovie] = useState(null);
+  const [fadeOut, setFadeOut] = useState(false);
 
 useEffect(() => {
   axios.get(url, options)
   .then((res) => setMovies(res.data.results))
   .catch((err) => console.log(err));
 }, []);
+
+const handleClose = () => {
+  setFadeOut(true);
+  setTimeout(() => {
+  setSelectedMovie(null);
+  setFadeOut(false);
+}, 500); //CSS animation duration
+};
 
   return (
     <div className="movie-list">
@@ -32,10 +41,20 @@ useEffect(() => {
             setSelectedMovie(selectedMovie?.id === movie.id ? null: movie) 
           }/>
           {selectedMovie?.id === movie.id && (
-            <div>
-              <p>{selectedMovie.overview}</p>
-              <p>{selectedMovie.popularity}</p>
+            
+            <div className={`modal-overlay ${fadeOut? "fade-out" : ""}`} onClick={handleClose}>
+            <div className="modal-content">
+              <div><img className="modal-backdrop" 
+                   src={`https://image.tmdb.org/t/p/original/${selectedMovie.backdrop_path}`} alt="Movie Poster" />
+              <button className="close" onClick={handleClose}>✕</button>
+                   </div>
+              <div className="modal-info">
+              <button className="play">Play</button>
+              <h1>{selectedMovie.title}</h1>
               <p>{selectedMovie.release_date}</p>
+              <p>{selectedMovie.overview}</p>
+              </div>
+            </div>
             </div>
           )}
         </Fragment>
