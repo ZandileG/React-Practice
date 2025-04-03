@@ -22,10 +22,11 @@ code{
   align-items: center;
   padding: 1rem 3rem;
   top: 0;
+  position: sticky;
 }
 
 .navbar img{
-  width: 130px;
+  width: 150px;
 }
 
 .navbar button{
@@ -41,4 +42,48 @@ code{
 .movie-list{
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1rem;
+  padding: 2rem;
+}
+
+.movie-card img{
+  border-radius: 4px;
+}
+
+.movie-card h3{
+  font-size: 1rem;
+  text-align: center;
+}
+
+.movie-card{
+  transition: transform 0.3s ease;
+}
+
+.movie-card:hover{
+  transform: scale(1.05);
+}
+
+.login{
+ width: 150px;
+ margin: 0 auto;
+}
+
+.login input{
+  padding: 1rem 1rem;
+  color: black;
+  border: solid 1px black;
+  border-radius: 4px;
+  margin-bottom: 1.5rem;
+  font-size: 1rem;
+}
+
+.login button{
+  background-color: rgb(203, 0, 0);
+  color: white;
+  padding: 0.5rem 1rem;
+  border: solid 1px black;
+  border-radius: 4px;
+  margin-bottom: 1rem;
+  margin-left: 4rem;
+  font-size: 1rem;
 }

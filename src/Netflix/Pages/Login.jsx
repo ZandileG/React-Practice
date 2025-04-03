@@ -1,6 +1,7 @@
 import React, { useContext, useState } from "react";
 import {AuthContext}  from "../Context/AuthContext";
 import {useNavigate}  from "react-router-dom";
+import "../../index.css"
 
 function Login() {
   const [username, setUsername] = useState("");
@@ -18,11 +19,10 @@ function handleLogin(){
 }
 
   return (
-    <div>
+    <div className="login">
       <h1>Sign In</h1>
-      
-      <input type="text" onChange={(e) => setUsername(e.target.value)} value={username}/>
-      <input type="password" onChange={(e) => setPassword(e.target.value)} value={password}/>
+      <input type="text" placeholder="Username" onChange={(e) => setUsername(e.target.value)} value={username}/>
+      <input type="password" placeholder="Password" onChange={(e) => setPassword(e.target.value)} value={password}/>
       <button onClick={handleLogin}>Sign In</button>
       {error && <p>{error}</p>}
     </div>
