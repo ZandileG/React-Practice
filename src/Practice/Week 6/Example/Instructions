@@ -1,3 +1,23 @@
+Netflix Features
+
+1. Sign in (authorisation)
+2. Display movies
+3. Select movie (modal)
+4. Add to favourites
+
+Task breakdown:
+1. Scafold project folder - folders, pages, components, dependencies
+2. Authorisation Context
+3. Routing
+4. Login page
+5. Components:
+    - Nvbar
+    - Footer
+    - Movies List (on Homepage)
+    - Movie Card
+6. Styling
+
+Favourites
 1. Define clearly the "favourites" state and it's integration
 - Navigation clearly accessible (Navbar?)
 - Where should state live? Context, Props or State to pass data? (If you're passing info from Home to a Favourites page, I suggest Context)

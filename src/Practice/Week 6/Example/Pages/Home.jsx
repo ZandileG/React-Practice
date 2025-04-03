@@ -1,11 +1,12 @@
 import React from "react";
+import MoviesList from "../Components/MoviesList";
 
 function Home() {
   return (
     <div>
-      <h1>Homepage</h1>
+      <MoviesList />
     </div>
-  )
+  );
 }
 
 export default Home;
