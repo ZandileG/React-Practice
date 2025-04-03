@@ -28,7 +28,8 @@ useEffect(() => {
       {movies.map((movie) =>(
         <Fragment key={movie.id}>
           <MovieCard movie={movie} onSelect={() =>
-            setSelectedMovie(selectedMovie?.id === movie.id ? null: movie)
+                          //toggling the selection of movies: if the selected movie exists, get its id
+            setSelectedMovie(selectedMovie?.id === movie.id ? null: movie) 
           }/>
           {selectedMovie?.id === movie.id && (
             <div>

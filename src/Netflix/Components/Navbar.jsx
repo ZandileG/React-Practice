@@ -14,7 +14,7 @@ function Navbar() {
 
   return (
     <div className="navbar">
-      <Link to ={"/"}><img src={Logo} /></Link>
+      <Link to ={"/"}><img src={Logo} alt="Netflix Logo"/></Link>
       {isAuthenticated && <button onClick={handleLogout}>Sign Out</button>}
     </div>
   );
