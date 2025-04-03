@@ -13,7 +13,7 @@ function Navbar() {
   }
 
   return (
-    <div classNme="navbar">
+    <div className="navbar">
       <Link to ={"/"}><img src={Logo} /></Link>
       {isAuthenticated && <button onClick={handleLogout}>Sign Out</button>}
     </div>

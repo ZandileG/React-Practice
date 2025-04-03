@@ -1,10 +1,10 @@
 import "./App.css";
 import React, {useContext} from "react";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Home from "./Practice/Week 6/Example/Pages/Home";
-import Login from "./Practice/Week 6/Example/Pages/Login";
-import Navbar from "./Practice/Week 6/Example/Components/Navbar";
-import AuthProvider, {AuthContext} from "./Practice/Week 6/Example/Context/AuthContext";
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
+import Home from "../src/Netflix/Pages/Home";
+import Login from "../src/Netflix/Pages/Login";
+import Navbar from "../src/Netflix/Components/Navbar";
+import AuthProvider, {AuthContext} from "../src/Netflix/Context/AuthContext";
 
 function ProtectedRoute({children}){
   const {isAuthenticated} = useContext(AuthContext);

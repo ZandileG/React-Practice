@@ -6,7 +6,7 @@ function AuthProvider({children}) {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
 
   function login(username, password){
-    if (username === "admin" && password === "password"){
+    if (username === "admin" && password === "netflix"){
     setIsAuthenticated(true)
     return true;
     } else{
