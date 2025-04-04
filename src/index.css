@@ -216,8 +216,16 @@ code{
   display: none;
 }
 
-.favourites{
+.favourites, .home{
   margin-right: 1rem;
+}
+
+.home{
+  display: none;
+}
+
+.title{
+  text-align: center;
 }
 
 /* Scrollbar */
@@ -235,4 +243,12 @@ code{
 
 ::-webkit-scrollbar-thumb:hover {
   background: black;
+}
+
+.footer{
+  color: white;
+  font-size: medium;
+  text-align: center;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
 }

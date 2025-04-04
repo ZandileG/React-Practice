@@ -1,5 +1,6 @@
-import React, {Fragment, useEffect, useState} from "react";
+import React, {Fragment, useEffect, useState, useContext} from "react";
 import MovieCard from "./MovieCard";
+import { FavouritesContext } from "../Context/FavouritesContext";
 import axios from "axios";
 import "../../index.css";
 
@@ -18,7 +19,7 @@ function MoviesList({searchQuery}) {
   const [movies, setMovies] = useState([]);
   const [selectedMovie, setSelectedMovie] = useState(null);
   const [fadeOut, setFadeOut] = useState(false);
-  const [isFavourite, setIsFavourite] = useState(false);
+  const { addFavourite, removeFavourite, isFavourite } = useContext(FavouritesContext);
 
 useEffect(() => {
   async function fetchMovies(){
@@ -48,14 +49,6 @@ function handleClose(){
 }, 500); //CSS animation duration
 };
 
-function addFavourites(){
-  setIsFavourite(true);
-}
-
-function removeFavourites(){
-  setIsFavourite(false);
-}
-
   return(
     <div className="movie-list">
       {movies.map((movie) =>(
@@ -63,23 +56,25 @@ function removeFavourites(){
           <MovieCard movie={movie} onSelect={() =>
 //toggling the selection of movies: if you click on a currently selected movie the code returns null, meaning that the movie will close. If you click on another movie, it will be selected and it will open.
             setSelectedMovie(selectedMovie?.id === movie.id ? null: movie) 
-          }/>
+         }/>
           {selectedMovie?.id === movie.id && (
-            
             <div className={`modal-overlay ${fadeOut ? "fade-out" : ""}`} onClick={handleClose}>
-            <div className="modal-content">
+           
+            <div className="modal-content" onClick={(e) => e.stopPropagation() /*stops the modal from closing everytime you click on it, closong should only be triggered by clicking a button or clicking outside the modal*/}>
               <div>
               <img className="modal-backdrop" src={`https://image.tmdb.org/t/p/original/${selectedMovie.backdrop_path}`} alt="Movie Poster" />
               <button className="close" onClick={handleClose}>✕</button>
               </div>
+
               <div className="modal-info">
               <button className="play">Play</button>
-              <button className="add-favourites" onClick={addFavourites} style={{display: isFavourite? "none" : "inline-block"}}>╋</button>
-              <button className="remove-favourites" onClick={removeFavourites} style={{display: isFavourite? "inline-block" : "none"}}>✓</button>
+              <button className="add-favourites" onClick={() => addFavourite(selectedMovie)} style={{display: isFavourite(selectedMovie.id)? "none" : "inline-block"}}>╋</button>
+              <button className="remove-favourites" onClick={() => removeFavourite(selectedMovie.id)} style={{display: isFavourite(selectedMovie.id)? "inline-block" : "none"}}>✓</button>
               <h1>{selectedMovie.title}</h1>
               <p>{selectedMovie.release_date}</p>
               <p>{selectedMovie.overview}</p>
               </div>
+
             </div>
             </div>
           )}
