@@ -1,8 +1,9 @@
 import "./App.css";
 import React, {useContext} from "react";
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
-import Home from "../src/Netflix/Pages/Home";
-import Login from "../src/Netflix/Pages/Login";
+import Home from "./Netflix/Pages/Home";
+import Login from "./Netflix/Pages/Login";
+import Favourites from "./Netflix/Pages/Favourites";
 import AuthProvider, {AuthContext} from "../src/Netflix/Context/AuthContext";
 
 function ProtectedRoute({children}){
@@ -16,6 +17,7 @@ function App(){
     <BrowserRouter>
     <Routes>
     <Route path="/login"element={<Login />} />
+    <Route path="/favourites"element={<Favourites />} />
     <Route path="/"element={<ProtectedRoute><Home /></ProtectedRoute>} />
     </Routes>
     </BrowserRouter>

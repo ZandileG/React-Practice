@@ -19,10 +19,17 @@ function handleSearch(e){
     navigate("/login");
   }
 
+  function openFavourites(){
+      navigate("/favourites");
+  }
+
   return (
     <div className="navbar">
       <Link to ={"/"}><img src={Logo} alt="Netflix Logo"/></Link>
+      <div>
+      <button className="favourites" onClick={openFavourites}>Favourites</button>
       <input placeholder="Search..." type="text" onChange={handleSearch}/>
+      </div>
       {isAuthenticated && <button onClick={handleLogout}>Sign Out</button>}
     </div>
   );

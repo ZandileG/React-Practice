@@ -18,6 +18,7 @@ function MoviesList({searchQuery}) {
   const [movies, setMovies] = useState([]);
   const [selectedMovie, setSelectedMovie] = useState(null);
   const [fadeOut, setFadeOut] = useState(false);
+  const [isFavourite, setIsFavourite] = useState(false);
 
 useEffect(() => {
   async function fetchMovies(){
@@ -39,13 +40,21 @@ useEffect(() => {
   }
 }, [searchQuery]);
 
-const handleClose = () => {
+function handleClose(){
   setFadeOut(true);
   setTimeout(() => {
   setSelectedMovie(null);
   setFadeOut(false);
 }, 500); //CSS animation duration
 };
+
+function addFavourites(){
+  setIsFavourite(true);
+}
+
+function removeFavourites(){
+  setIsFavourite(false);
+}
 
   return(
     <div className="movie-list">
@@ -57,14 +66,16 @@ const handleClose = () => {
           }/>
           {selectedMovie?.id === movie.id && (
             
-            <div className={`modal-overlay ${fadeOut? "fade-out" : ""}`} onClick={handleClose}>
+            <div className={`modal-overlay ${fadeOut ? "fade-out" : ""}`} onClick={handleClose}>
             <div className="modal-content">
-              <div><img className="modal-backdrop" 
-                   src={`https://image.tmdb.org/t/p/original/${selectedMovie.backdrop_path}`} alt="Movie Poster" />
+              <div>
+              <img className="modal-backdrop" src={`https://image.tmdb.org/t/p/original/${selectedMovie.backdrop_path}`} alt="Movie Poster" />
               <button className="close" onClick={handleClose}>✕</button>
-                   </div>
+              </div>
               <div className="modal-info">
               <button className="play">Play</button>
+              <button className="add-favourites" onClick={addFavourites} style={{display: isFavourite? "none" : "inline-block"}}>╋</button>
+              <button className="remove-favourites" onClick={removeFavourites} style={{display: isFavourite? "inline-block" : "none"}}>✓</button>
               <h1>{selectedMovie.title}</h1>
               <p>{selectedMovie.release_date}</p>
               <p>{selectedMovie.overview}</p>
