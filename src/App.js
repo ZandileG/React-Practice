@@ -16,7 +16,7 @@ function App(){
   return (
     <AuthProvider>
     <FavouritesProvider>
-    <BrowserRouter>
+    <BrowserRouter basename="/React-Practice">
     <Routes>
     <Route path="/login"element={<Login />} />
     <Route path="/favourites"element={<Favourites />} />
