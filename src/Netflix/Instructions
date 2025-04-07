@@ -12,7 +12,7 @@ Task breakdown:
 3. Routing
 4. Login page
 5. Components:
-    - Nvbar
+    - Navbar
     - Footer
     - Movies List (on Homepage)
     - Movie Card
