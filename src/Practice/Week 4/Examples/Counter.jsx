@@ -14,7 +14,7 @@ function Counter (){
 return(
     <div>
         <h1>Counter: {counter}</h1>
-        <button onClick={() => setCounter(counter + 1)}>Inrease</button>
+        <button onClick={() => setCounter(counter + 1)}>Increase</button>
     </div>
 );
 }

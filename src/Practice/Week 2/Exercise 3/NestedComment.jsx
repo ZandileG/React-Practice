@@ -21,10 +21,10 @@ export default function NestedComment({comment}){
     
     <h1>Nested Comments</h1> 
 
-/*Line 29: The component checks if "comment" has any replies. If there are (comment.replies.length > 0) 
+/*Line 37: The component checks if "comment" has any replies. If there are (comment.replies.length > 0) 
            a new div with the class "comment-replies" is rendered.
 
- Line 36: The map() function is used to loop over the replies array and for each reply, it renders another
+ Line 40: The map() function is used to loop over the replies array and for each reply, it renders another
           "NestedComment" component recursively, passing the individual reply object as a prop.
           each NestedComment can render another NestedComment inside itself, allowing for a potentially 
           infinite depth of nested comments.*/
